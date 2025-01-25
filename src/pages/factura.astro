@@ -1,0 +1,15 @@
+---
+import Logo from "@/components/Logo.astro";
+import Recepit from "../components/Recepit";
+import Layout from "../layouts/Layout.astro";
+import FormSection from "@/components/FormSection";
+---
+
+<Layout>
+  <main class="flex gap-2">
+    <FormSection client:load/>
+    <Recepit client:load>
+      <Logo className="w-48" />
+    </Recepit>
+  </main>
+</Layout>

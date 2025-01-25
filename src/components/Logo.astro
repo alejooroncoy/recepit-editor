@@ -1,0 +1,8 @@
+---
+import LogoSrc from "@/assets/Logo.png";
+import { Image } from "astro:assets";
+
+const { className } = Astro.props;
+---
+
+<Image src={LogoSrc} alt="Logo" class={className} />
