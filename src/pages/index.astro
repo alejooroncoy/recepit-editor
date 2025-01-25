@@ -1,9 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import ButtonLink from "@/components/ButtonLink";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+  <main class="flex-1 flex flex-col items-center justify-center gap-5">
+    <h1 class="text-5xl font-bold">Factura editor</h1>
+    <div>
+      <ButtonLink />
+    </div>
+  </main>
 </Layout>
