@@ -13,7 +13,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "./ui/button";
 import useLogin from "@/hooks/useLogin";
-import { Loader2Icon } from "lucide-react";
 
 const schema = z.object({
   password: z.string().nonempty({
@@ -68,7 +67,23 @@ const FormEntryRecepit = () => {
             name="password"
           />
           <Button type="submit" disabled={loading}>
-            {loading && <Loader2Icon className="w-6 h-6 animate-spin" />}
+            {loading && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                class="lucide lucide-loader-circle"
+                className="w-6 h-6 animate-spin"
+              >
+                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+              </svg>
+            )}
             Ingresar
           </Button>
         </form>
