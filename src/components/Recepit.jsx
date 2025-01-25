@@ -1,4 +1,4 @@
-import useStore from "@/hooks/info";
+import useStoreInfo from "@/hooks/useStoreInfo";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
@@ -23,7 +23,7 @@ const splitText = (text) => {
 };
 
 const Recepit = ({ children }) => {
-  const info = useStore((state) => state.info);
+  const info = useStoreInfo((state) => state.info);
 
   const description1Lines = splitText(info.description1);
   const description2Lines = splitText(info.description2);
@@ -186,7 +186,9 @@ const Recepit = ({ children }) => {
         <div className="w-full h-1 my-4 bg-first" />
       </div>
       <footer>
-        <h3 className="text-first text-xl">Observaciones:{" "}{info.observations}</h3>
+        <h3 className="text-first text-xl">
+          Observaciones: {info.observations}
+        </h3>
         <p className="text-first">
           Ingreso Sujeto a aprobación de auditoría Médica
         </p>

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useStore = create((set) => ({
+const useStoreInfo = create((set) => ({
   info: {
     numberRecepit: "",
     date: new Date(),
@@ -38,4 +38,4 @@ const useStore = create((set) => ({
     })),
 }));
 
-export default useStore;
+export default useStoreInfo;

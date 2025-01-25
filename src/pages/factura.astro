@@ -3,13 +3,22 @@ import Logo from "@/components/Logo.astro";
 import Recepit from "../components/Recepit";
 import Layout from "../layouts/Layout.astro";
 import FormSection from "@/components/FormSection";
+import checkToken from "@/server/checkToken";
+import SignOutButton from "@/components/SignOutButton";
+
+const isVerified = await checkToken(Astro.cookies.get("token")?.value);
+
+if (!isVerified) {
+  return Astro.redirect("/");
+}
 ---
 
 <Layout>
   <main class="flex gap-2">
-    <FormSection client:load/>
+    <FormSection client:load />
     <Recepit client:load>
       <Logo className="w-48" />
     </Recepit>
+    <SignOutButton client:load />
   </main>
 </Layout>

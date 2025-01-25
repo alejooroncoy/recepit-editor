@@ -7,7 +7,7 @@ import { Textarea } from "./ui/textarea";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import useStore from "@/hooks/info";
+import useStoreInfo from "@/hooks/useStoreInfo";
 import { useState } from "react";
 import { es } from "date-fns/locale";
 
@@ -78,9 +78,9 @@ const formSchema = z.object({
 });
 
 const FormSection = () => {
-  const updateState = useStore((state) => state.updateState);
-  const clearState = useStore((state) => state.clearState);
-  const info = useStore((state) => state.info);
+  const updateState = useStoreInfo((state) => state.updateState);
+  const clearState = useStoreInfo((state) => state.clearState);
+  const info = useStoreInfo((state) => state.info);
 
   const [errors, setErrors] = useState({});
 
@@ -144,6 +144,7 @@ const FormSection = () => {
                 onSelect={(date) => {
                   updateState("date", date);
                 }}
+                locale={es}
                 disabled={(date) =>
                   date > new Date() || date < new Date("1900-01-01")
                 }
