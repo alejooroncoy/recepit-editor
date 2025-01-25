@@ -1,6 +1,6 @@
 import useLogin from "@/hooks/useLogin";
 import { Button } from "./ui/button";
-import { Loader2 } from "lucide-react";
+import { Loader2Icon } from "lucide-react";
 
 const SignOutButton = () => {
   const { logout, loading } = useLogin();
@@ -11,7 +11,7 @@ const SignOutButton = () => {
 
   return (
     <Button className="fixed bottom-0 right-0 m-3" onClick={onSignOut}>
-      {loading && <Loader2 className="w-6 h-6 animate-spin" />}
+      {loading && <Loader2Icon className="w-6 h-6 animate-spin" />}
       Cerrar sesión
     </Button>
   );

@@ -13,7 +13,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "./ui/button";
 import useLogin from "@/hooks/useLogin";
-import { Loader2 } from "lucide-react";
+import { Loader2Icon } from "lucide-react";
 
 const schema = z.object({
   password: z.string().nonempty({
@@ -68,7 +68,7 @@ const FormEntryRecepit = () => {
             name="password"
           />
           <Button type="submit" disabled={loading}>
-            {loading && <Loader2 className="w-6 h-6 animate-spin" />}
+            {loading && <Loader2Icon className="w-6 h-6 animate-spin" />}
             Ingresar
           </Button>
         </form>
