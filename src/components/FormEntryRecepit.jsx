@@ -56,7 +56,7 @@ const FormEntryRecepit = () => {
               <FormItem>
                 <FormLabel>Contraseña</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="**********" />
+                  <Input {...field} placeholder="**********" type="password" />
                 </FormControl>
                 <FormDescription>Contraseña para ingresar</FormDescription>
                 <FormMessage>
