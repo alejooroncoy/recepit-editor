@@ -172,8 +172,7 @@ const Recepit = ({ children }) => {
             <div className="h-full">
               <ul className="flex flex-col gap-2 items-center justify-end">
                 <li className="flex flex-col items-center">
-                  <div className="w-80 border-b border-first border-dotted h-12"></div>
-                  <span className="text-center text-first">FIRMA</span>
+                  <span className="text-center text-first">MEPLIFE</span>
                 </li>
                 <li className="flex flex-col items-center">
                   <div className="w-80 border-b border-first border-dotted h-8"></div>
